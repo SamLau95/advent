@@ -1,7 +1,7 @@
 # Advent of Code
 
-| Year | Notebook | ipynb file |
-| ---- | ----- | ---- |
+| Year | Notebook       | ipynb file       |
+| ---- | -------------- | ---------------- |
 | 2019 | [link][2019nb] | [link][2019file] |
 | 2018 | [link][2018nb] | [link][2018file] |
 
