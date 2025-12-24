@@ -74,18 +74,18 @@ zeros
 # Part 1
 commas = lambda text: text.split(",")
 endpoints = lambda section: mapt(int, section.split("-"))
-ranges = Input(2, sections=commas, parser=endpoints, is_test=True)
-ranges
+ranges = Input(2, sections=commas, parser=endpoints, is_test=False)
+ranges[:5]
 
 
 # %%
-def matching_ids(start, end):
+def invalid_ids(start, end):
     ids = np.arange(start, end + 1)
     n_digits = np.ceil(np.log10(ids))
     divisors = 10 ** (n_digits // 2)
     front = ids // divisors
     back = ids % divisors
-    return np.sum(front == back)
+    return ids[front == back]
 
 
-matching_ids(1188511880, 1188511890)
+np.concat([invalid_ids(start, end) for start, end in ranges]).sum()
